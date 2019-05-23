@@ -16,7 +16,7 @@ describe Member do
   end
 
   describe '#member_details' do 
-    it 'can show the details of the member based on id' do 
+    it 'can show the details of the member' do 
       member.check_out('The Hunger Games')
       expect(member.details).to eq({name: "Bananaman", id: "12345", checked_out_items: ['The Hunger Games'] })
     end
