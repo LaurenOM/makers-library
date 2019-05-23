@@ -15,4 +15,8 @@ class Member
     raise 'Item has not been checked out!' if !checked_out_items.include?(item)
     checked_out_items.delete(item)
   end
+  
+  def details
+    {name: name, id: id_number, checked_out_items: checked_out_items}
+  end 
 end

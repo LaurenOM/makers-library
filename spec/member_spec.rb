@@ -15,6 +15,13 @@ describe Member do
     expect(member.checked_out_items).to eq([])
   end
 
+  describe '#member_details' do 
+    it 'can show the details of the member based on id' do 
+      member.check_out('The Hunger Games')
+      expect(member.details).to eq({name: "Bananaman", id: "12345", checked_out_items: ['The Hunger Games'] })
+    end
+  end 
+
   describe '#check_out' do
     it('adds the passed item to checked_out_items') do
       member.check_out('book')
